@@ -1,0 +1,439 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --navbar-height: 3.5rem;
+    --my-filter: grayscale(100%);
+
+    --off-focus-width: 5rem;
+    --on-focus-width: 17rem;
+}
+
+#navbar{
+    width: 100%;
+    height: var(--navbar-height);
+    background: white;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: top 0.15s linear;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#web-page-icon{
+    height: 70%;
+    width: auto;
+}
+
+@keyframes progress-bar-animation {
+    0%{
+        scale: 0 1;
+    }
+
+    100%{
+        scale: 1 1;
+    }
+}
+
+#whole-page{
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: Inter, sans-serif;
+}
+
+#description-box{
+    width: 50%;
+}
+
+.description-inside-box{
+    box-sizing: border-box;
+    padding: 6rem 4rem;
+    
+    margin-left: 2rem;
+
+    font-size: 1.6rem;
+}
+
+.description-inside-box > h1{
+    font-size: 4rem;
+    width: min-content;
+}
+
+#killjoy-description > h1{
+    background: linear-gradient(to right, #f9d423 60%, rgb(5, 166, 5));    
+    background-clip: text;
+    color: transparent; 
+}
+
+#sova-description > h1{
+    background: linear-gradient(to right, #4450bf, #000000);    
+    background-clip: text;
+    color: transparent; 
+}
+
+#kayo-description > h1{
+    background: linear-gradient(to right, #1b2eda, #000000);    
+    background-clip: text;
+    color: transparent; 
+}
+
+#breach-description > h1{
+    background: linear-gradient(to right, #ee800a, #ff0000);    
+    background-clip: text;
+    color: transparent; 
+}
+
+#astra-description > h1{
+    background: linear-gradient(to right, rgb(239, 30, 128), #cc00ff);    
+    background-clip: text;
+    color: transparent; 
+}
+
+#jett-description > h1{
+    background: linear-gradient(to right, rgb(10, 132, 255), #1e00ff);    
+    background-clip: text;
+    color: transparent; 
+}
+
+.agent-images{
+    width: var(--off-focus-width);
+    height: auto;
+    filter: var(--my-filter);
+
+    position: fixed;
+
+}
+
+#kayo{
+    top: 77%;
+    left: 83%;
+
+    animation: kayo-animation linear;
+    animation-timeline: scroll();
+}
+
+#killjoy{
+    top: 80%;
+    left: 70%;
+
+    animation: killjoy-animation linear;
+    animation-timeline: scroll();
+}
+
+#astra{
+    top: 70%;
+    left: 5%;
+
+    animation: astra-animation linear;
+    animation-timeline: scroll();
+}
+
+#sova{
+    top: 79%;
+    left: 57%;
+
+    animation: sova-animation linear;
+    animation-timeline: scroll();
+}
+
+#breach{
+    top: 50%;
+    left: 92%;
+
+    animation: breach-animation linear;
+    animation-timeline: scroll();
+}
+
+#jett{
+    filter: none;
+
+    width: var(--on-focus-width);
+    top: 17%;
+    left: 65%;
+
+    animation: jett-animation linear;
+    animation-timeline: scroll();
+}
+
+
+@keyframes jett-animation {
+    0%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width);
+    }
+
+    20%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    100%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+}
+
+@keyframes astra-animation {
+    0%{
+        top: 60%;
+        left: 50%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }  
+
+    18%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width);
+    }
+
+    35%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    100%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+}
+
+@keyframes sova-animation {
+    18%{
+        top: 79%;
+        left: 57%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    38%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width);
+    }
+
+    55%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    100%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+}
+
+@keyframes killjoy-animation {
+    39%{
+        top: 80%;
+        left: 70%;
+
+        width: var(--off-focus-width);
+        filter: var(--my-filter);
+    }
+
+    56%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width);
+    }
+
+    75%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    100%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);       
+    }
+}
+
+@keyframes kayo-animation {
+    57%{
+        top: 77%;
+        left: 83%;
+
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    80%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width);
+    }
+
+    94%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width); 
+    }
+
+    100%{
+        top: -20%;
+        left: 70%;
+        filter: var(--my-filter);
+        width: var(--off-focus-width);         
+    }
+}
+
+@keyframes breach-animation {
+    80%{
+        top: 50%;
+        left: 92%;
+
+        filter: var(--my-filter);
+        width: var(--off-focus-width);
+    }
+
+    96%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width); 
+    }
+
+    100%{
+        top: 17%;
+        left: 65%;
+        filter: none;
+        width: var(--on-focus-width); 
+    }
+}
+
+
+#footer{
+
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0.3cqi;
+
+    container-type: inline-size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5cqi;
+
+    color: gray;
+
+    font-size: 1cqi;
+}
+
+#footer > p{
+    color: blue;
+    margin: 0;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1050px){
+
+    #killjoy, #breach, #sova, #kayo, #jett, #astra{
+        animation: none;
+
+        position: relative;
+        top: 5rem;
+        left: 0;
+
+        width: 20rem;
+        filter: none;
+    }
+
+    #description-box{
+        width: 100%;
+
+        padding: 2rem 6rem;
+
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description-inside-box {
+        margin-left: 0;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    
+    :root{
+        --navbar-height: 10cqi;
+    }
+    
+    #progress-bar{
+        height: 1cqi;
+    }
+
+    #description-box{
+        container-type: inline-size;
+
+        font-size: 3cqi;
+
+        width: 100%;
+
+        padding: 2cqi 6cqi;
+
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #killjoy, #breach, #sova, #kayo, #jett, #astra{
+        animation: none;
+
+        position: relative;
+        top: 10cqi;
+        left: 0;
+
+        width: 40cqi;
+        filter: none;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .description-inside-box {
+        padding: 10cqi 3cqi;
+        font-size: 3cqi;
+        margin-left: 0;
+    }
+
+    .description-inside-box > h1{
+        font-size: 6cqi;
+    }
+}
