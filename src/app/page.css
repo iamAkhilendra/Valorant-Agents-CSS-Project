@@ -437,3 +437,9 @@ body{
         font-size: 6cqi;
     }
 }
+
+@media screen and (max-width: 1050px) {
+    #footer{
+        font-size: 1.5cqi;
+    }
+}
